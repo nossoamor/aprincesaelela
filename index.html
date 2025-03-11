@@ -19,21 +19,21 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
-            z-index: 1; /* Garante que o título estará na frente de outros elementos */
+            z-index: 1;
+            font-weight: bold; /* Para deixar o texto mais visível */
         }
-        h1::after {
-            content: 'Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕';
+        /* Sombra do texto sem afetar a fonte principal */
+        .shadow-text {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            color: black;
-            -webkit-text-fill-color: black;
-            z-index: -1;
-            font-weight: bold;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
             font-size: 2.5em;
+            font-weight: bold;
+            color: black;
+            z-index: -1;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
         }
         .countdown {
             font-size: 2em;
@@ -63,7 +63,10 @@
         Seu navegador não suporta a tag de áudio.
     </audio>
     
-    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1> <!-- Texto visível alterado -->
+    <!-- Título com sombra -->
+    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1> 
+    <div class="shadow-text">Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</div> <!-- Sombra abaixo do título -->
+    
     <div class="countdown" id="countdown"></div>
     <h2 style="color: #703a5a;">Nossos Momentos ✨</h2>
     <div class="gallery">
