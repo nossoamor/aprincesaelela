@@ -59,6 +59,12 @@
             margin-top: 20px;
             text-align: center;
         }
+        /* Garantir que o player de áudio não afete a estrutura */
+        audio {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -72,7 +78,7 @@
     <!-- Player de áudio -->
     <div class="audio-player">
         <audio controls>
-            <source src="monalisa.mp3" type="audio/mp3">
+            <source src="sua-musica.mp3" type="audio/mp3">
             Seu navegador não suporta a tag de áudio.
         </audio>
     </div>
