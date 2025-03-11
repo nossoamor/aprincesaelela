@@ -13,6 +13,22 @@
             margin: 0;
             padding: 20px;
         }
+        h1 {
+            font-size: 2.5em;
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap; /* Evita quebra de linha */
+            text-align: center; /* Garante que o texto fique centralizado */
+        }
+        .countdown {
+            font-size: 2em;
+            margin: 20px;
+            font-weight: bold;
+            color: #703a5a;
+        }
         .gallery {
             display: flex;
             justify-content: center;
@@ -39,6 +55,10 @@
     </style>
 </head>
 <body>
+    <!-- Título com a única frase -->
+    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1>
+
+    <div class="countdown" id="countdown"></div>
     <h2 style="color: #703a5a;">Nossos Momentos ✨</h2>
 
     <!-- Player de áudio -->
