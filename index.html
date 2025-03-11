@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ffddcc, #ffebcc, #ccffcc, #cceeff, #e0ccff);
+            color: #703a5a;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(to right, #ff9aa2, #ffb7b2, #ffdac1, #e2f0cb, #b5ead7, #c7ceea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+        h1::after {
+            content: 'Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: black;
+            -webkit-text-fill-color: black;
+            z-index: -1;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .countdown {
+            font-size: 2em;
+            margin: 20px;
+            font-weight: bold;
+            color: #703a5a;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            border: 5px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contagem Regressiva para Nosso 1 Ano Juntas! 💕</h1>
+    <div class="countdown" id="countdown"></div>
+    <h2 style="color: #703a5a;">Nossos Momentos ✨</h2>
+    <div class="gallery">
+        <img src="foto1.jpeg" alt="Nossos momentos...">
+        <img src="foto2.jpeg" alt="O dia que te dei sua aliança...">
+        <img src="foto3.jpeg" alt="A primeira vez que fomos à praia juntas...">
+        <img src="foto4.jpeg" alt="O dia que fui com você e sua mãe pro shopping...">
+        <img src="foto5.jpeg" alt="Quando te acompanhei no concurso de Itambé...">
+        <img src="foto6.jpeg" alt="Eu, no teu aconchego...">
+        <img src="foto7.jpeg" alt="Meu sorriso mais feliz...">
+    </div>
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date('2025-05-28 00:00:00').getTime(); // Substitua pelo dia exato
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
