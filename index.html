@@ -19,6 +19,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
+            z-index: 1; /* Garante que o título estará na frente de outros elementos */
         }
         h1::after {
             content: 'Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕';
@@ -58,11 +59,11 @@
 <body>
     <!-- Adicionando música -->
     <audio autoplay loop>
-        <source src="monalisa.mp3" type="audio/mp3">
+        <source src="sua-musica.mp3" type="audio/mp3">
         Seu navegador não suporta a tag de áudio.
     </audio>
     
-    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1>
+    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1> <!-- Texto visível alterado -->
     <div class="countdown" id="countdown"></div>
     <h2 style="color: #703a5a;">Nossos Momentos ✨</h2>
     <div class="gallery">
