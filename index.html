@@ -22,13 +22,12 @@
             z-index: 1;
             font-weight: bold;
         }
-        /* Corrigido para o alinhamento da sombra do texto */
+        /* Sombra ajustada para alinhamento perfeito */
         .shadow-text {
             position: absolute;
-            top: 10px; /* Ajuste feito aqui para o alinhamento perfeito */
+            top: 0;  /* Ajustando o top para alinhar perfeitamente */
             left: 0;
             right: 0;
-            bottom: 0;
             font-size: 2.5em;
             font-weight: bold;
             color: black;
@@ -59,7 +58,6 @@
             margin-top: 20px;
             text-align: center;
         }
-        /* Garantir que o player de áudio não afete a estrutura */
         audio {
             width: 100%;
             max-width: 300px;
@@ -69,7 +67,7 @@
 </head>
 <body>
     <!-- Título com a sombra -->
-    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1> 
+    <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1>
     <div class="shadow-text">Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</div> <!-- Sombra abaixo do título -->
 
     <div class="countdown" id="countdown"></div>
