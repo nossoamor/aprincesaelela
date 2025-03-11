@@ -19,7 +19,8 @@
             text-align: center; /* Garante que o texto fique centralizado */
             margin: 0;
             padding: 0;
-            white-space: nowrap; /* Evita quebra de linha */
+            white-space: normal; /* Permite que o texto quebre a linha se necessário */
+            word-wrap: break-word; /* Quebra palavras longas se necessário */
         }
         .countdown {
             font-size: 2em;
@@ -72,24 +73,4 @@
         <img src="foto3.jpeg" alt="A primeira vez que fomos à praia juntas...">
         <img src="foto4.jpeg" alt="O dia que fui com você e sua mãe pro shopping...">
         <img src="foto5.jpeg" alt="Quando te acompanhei no concurso de Itambé...">
-        <img src="foto6.jpeg" alt="Eu, no teu aconchego...">
-        <img src="foto7.jpeg" alt="Meu sorriso mais feliz...">
-    </div>
-
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date('2025-05-28 00:00:00').getTime(); // Substitua pelo dia exato
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-            
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-            
-            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-        setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
+        <img src="foto
