@@ -54,20 +54,29 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             border: 5px solid white;
         }
+        /* Player de áudio */
+        .audio-player {
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <!-- Música que começa ao interagir com a página -->
-    <audio id="audio" loop>
-        <source src="monalisa.mp3" type="audio/mp3">
-    </audio>
-
     <!-- Título com a sombra -->
     <h1>Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</h1> 
     <div class="shadow-text">Eu já estou na contagem regressiva para o nosso 1º ano juntas... 💕</div> <!-- Sombra abaixo do título -->
 
     <div class="countdown" id="countdown"></div>
     <h2 style="color: #703a5a;">Nossos Momentos ✨</h2>
+
+    <!-- Player de áudio -->
+    <div class="audio-player">
+        <audio controls>
+            <source src="monalisa.mp3" type="audio/mp3">
+            Seu navegador não suporta a tag de áudio.
+        </audio>
+    </div>
+
     <div class="gallery">
         <img src="foto1.jpeg" alt="Nossos momentos...">
         <img src="foto2.jpeg" alt="O dia que te dei sua aliança...">
@@ -79,12 +88,6 @@
     </div>
 
     <script>
-        // Reproduzir música automaticamente após interação do usuário
-        window.onload = function() {
-            const audio = document.getElementById("audio");
-            audio.play();
-        };
-
         function updateCountdown() {
             const targetDate = new Date('2025-05-28 00:00:00').getTime(); // Substitua pelo dia exato
             const now = new Date().getTime();
